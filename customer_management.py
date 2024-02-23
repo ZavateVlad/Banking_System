@@ -1,18 +1,12 @@
-personal_information = ['Age', 'Profession', 'Married']
 
 class Customer:
-    def _init_(self):
-        self.customer = {}
-        self.customer_information = {}
-        self.create_user()
+    def __init__(self):
+        self.user_dict = None
 
-    def create_user(self):
-        self.name = str(input("Full Name: "))
-        self.address = input("Address: ")
-        self.customer['Name'] = self.name
-        self.customer['Address'] = self.address
-        print("Tell us about yourself")
-        for info in personal_information:
-            user_selection = input(f'{info}: ')
-            self.customer_information[info] = user_selection
-            self.customer['Information'] = self.customer_information
+    def user_input(self, *args):
+        self.user_dict = {}
+        for arg in args:
+            value = input(f'{arg}: ')
+            self.user_dict[arg] = value
+
+
