@@ -1,20 +1,14 @@
 from customer_management import Customer
+from GUI import CustomerRegistration
 import pandas as pd
 
 all_customers = []
-user = Customer()
+#user = Customer()
 new_user = True
 data = ''
 
 information = ['First Name', 'Last Name', 'Age', 'Profession']
+first_page = CustomerRegistration(information)
+first_page.run()
 
 
-while new_user:
-    reset = input('Would you like to create a new user?: ').lower()
-    if reset == 'yes':
-        user.user_input(*information)
-        all_customers.append(user.user_dict)
-        data = pd.DataFrame(all_customers)
-    else:
-        new_user = False
-    data.to_csv('Users.csv')
