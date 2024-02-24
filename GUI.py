@@ -21,7 +21,6 @@ class CustomerRegistration:
         self.photo = PhotoImage(file='bank.png')
         canvas.create_image(130, 75, image=self.photo)
         canvas.pack()
-        print('Image')
 
         self.entries = {}
         for info in self.information:

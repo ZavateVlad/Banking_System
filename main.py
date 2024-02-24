@@ -1,4 +1,3 @@
-from customer_management import Customer
 from GUI import CustomerRegistration
 import pandas as pd
 
